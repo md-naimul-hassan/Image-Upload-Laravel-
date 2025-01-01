@@ -26,6 +26,7 @@ Route::post('/user', function (Request $request) {
         return response()->json([
             'message' => 'Image uploaded successfully!',
             'file_path' => Storage::url($path),
+            
         ], 200);
     } catch (\Exception $e) {
         return response()->json([
